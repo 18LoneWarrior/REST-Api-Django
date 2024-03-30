@@ -149,9 +149,9 @@ REST_FRAMEWORK = {
         'anon': '200/day',
         'user': '200/day'},
     # -------  For disabling browsable API  ----------
-    # 'DEFAULT_RENDERER_CLASSES': (
-    #     'rest_framework.renderers.JSONRenderer',
-    # )
+    'DEFAULT_RENDERER_CLASSES': (
+         'rest_framework.renderers.JSONRenderer',
+     )
 }
 # -----------  JWT Tokens Validity  ----------
 SIMPLE_JWT = {
