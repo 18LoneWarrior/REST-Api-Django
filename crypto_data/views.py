@@ -11,9 +11,9 @@ from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
 class BlockChainView(viewsets.ModelViewSet):
     queryset = BlockChain.objects.all()
     serializer_class = BlockSerializer
-    # authentication_classes = [JWTAuthentication]
-    # permission_classes = [IsAuthenticatedOrReadOnly]
-    # throttle_classes = [AnonRateThrottle, UserRateThrottle]
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticatedOrReadOnly]
+    throttle_classes = [AnonRateThrottle, UserRateThrottle]
     pagination_class = PageNumberPagination
     filter_backends = [SearchFilter]
     search_fields = ['^blockchain', '^symbol']
